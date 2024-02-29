@@ -12,13 +12,9 @@ const app = createApp({
 
   methods: {
     fetchtoDoElements() {
-      axios
-        .get("http://localhost/php-todo-list-json/back-end/api/get-list.php")
-        .then((response) => {
-          this.toDoElements = response.data;
-          console.log(response.data);
-          console.log(this.toDoElements);
-        });
+      axios.get("../back-end/api/get-list.php").then((response) => {
+        this.toDoElements = response.data.toDoElements;
+      });
     },
     //   invertStatus(i) {
     //     this.toDoElements[i].done = !this.toDoElements[i].done;
