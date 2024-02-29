@@ -28,6 +28,9 @@
     <!-- Vue3 cdn -->
     <script src="https://unpkg.com/vue@3"></script>
 
+    <!-- axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
     <!-- link Java Script main -->
     <script type="text/javascript" src="./js/main.js" defer></script>
   </head>
@@ -45,6 +48,7 @@
             type="text"
             id="new-todo"
             placeholder="Andare a danza"
+            autofocus
           />
           <button @click="addNewToDoElement()" class="btn-success">Add</button>
           <ul id="to-do-list">
