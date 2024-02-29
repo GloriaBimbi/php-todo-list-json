@@ -40,6 +40,7 @@ const app = createApp({
         axios
           .post("../back-end/api/store-item.php", data, params)
           .then((response) => {
+            console.log(response.data);
             this.toDoElements = response.data;
           });
       } else {

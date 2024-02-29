@@ -2,6 +2,13 @@
 
 //salvo l'oggetto composto dal tezt inserito dall'utente e dalla chiave done falsa come da default, ottenute da una richiesta axios in post, in una variabile
 $newElement = $_POST['newElement'];
+//trasformo il valore della chiave done in un booleano (perchè viene interpretato come stringa)
+$newElement['done'] = boolval($newElement['done']);
+//cambiando il tipo di dato in booleano, automaticamente viene settato come true, quindi metto un controllo che se il valore è true, lo trasforma in false
+if($newElement['done'] == true){
+    $newElement['done'] = false;
+};
+
 
 //leggo il contenuto del file json
 $json_todolist = file_get_contents('../data/todolist.json');
@@ -16,7 +23,7 @@ $todolist = $todolist_array['toDoElements'];
 $todolist[] = $newElement;
 
 //salvo nel json la il nuovo array
-$json_new_list = json_encode($todolist);
+$json_new_list = json_encode($todolist, true);
 
 //avviso il browser che sta per riceve un file json
 header('Content-Type: application/json');
