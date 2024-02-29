@@ -1,0 +1,67 @@
+body {
+  background-color: rgb(120, 118, 115);
+}
+
+.container {
+  margin: 50px;
+}
+
+h1,
+label,
+input {
+  margin-left: 65px;
+}
+
+button {
+  margin-left: 20px;
+  cursor: pointer;
+  border: 1px solid black;
+  padding: 5px 10px;
+  border-radius: 2px;
+}
+
+button:hover {
+  background-color: rgba(86, 83, 83, 0.249);
+  border: 1px solid black;
+}
+
+h1 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-decoration: underline;
+}
+
+#to-do-list {
+  list-style: none;
+
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+#to-do-list li {
+  background-color: rgb(136, 242, 134);
+  margin: 30px;
+  padding: 20px 30px;
+  width: 300px;
+  border-radius: 0.5rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.to-do-text {
+  font-size: 20px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  cursor: pointer;
+}
+
+.cross {
+  padding: 5px;
+  border-radius: 50%;
+  border: 1px solid red;
+  background-color: rgb(245, 61, 61, 0.5);
+  text-align: center;
+  cursor: pointer;
+}
